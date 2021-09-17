@@ -9,7 +9,6 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 })
 export class AppComponent {
   title = 'sail-login';
-  login_display = true;
 
   constructor() { }
 
@@ -17,10 +16,6 @@ export class AppComponent {
 
   }
 
-  ngToggle(): void {
-    this.login_display = !this.login_display;
-  }
-  
-    
+ 
   }
 

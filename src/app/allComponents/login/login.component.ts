@@ -1,6 +1,6 @@
 import { Component, EventEmitter, OnInit,Output } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -8,11 +8,11 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 
 export class LoginComponent implements OnInit {
-  url = 'https://localhost:3000/login'; 
+  url = 'https://git.heroku.com/sailapi.git'; 
   postData = {username:'username',
       password:'password'};
   @Output("ngToggle") ngToggle: EventEmitter<any> = new EventEmitter();
-  constructor(public http: HttpClient) { }
+  constructor(public http: HttpClient , private _router: Router) { }
 
   ngOnInit(): void {
     
@@ -32,12 +32,15 @@ export class LoginComponent implements OnInit {
 
    loginClick(): void{
 
-    const headers = new HttpHeaders({ 'Content-Type': 'application/json'});
-    this.http.post<any>(this.url, this.postData,{headers})
-    .toPromise().then(data =>
-      { console.log(data);
-      });
+    //console.log(this.postData.password);
+    if(this.postData.username == 'role1')
+    { this._router.navigate(['role1'])}
 
+    if(this.postData.username == 'role2')
+    { this._router.navigate(['role2'])}
+
+    if(this.postData.username == 'role3')
+    { this._router.navigate(['role3'])}
    }
 
   onClick(): void {

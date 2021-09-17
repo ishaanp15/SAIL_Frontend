@@ -4,8 +4,8 @@
 
 html,body{
 background-image: url('Sail.jpg');
+background-repeat: repeat-y;
 background-size: cover;
-background-repeat: no-repeat;
 height: 100%;
 font-family: 'Numans', sans-serif;
 }

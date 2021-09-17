@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Role1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+  <div class="sidebar-container">
+    <div class="sidebar-logo">
+      Role 3
+    </div>
+    <ul class="sidebar-navigation">
+      <li class="header">Navigation</li>
+      <li>
+        <a (click)="this.show = 1" style="cursor: pointer">
+          <i class="fa fa-home" aria-hidden="true"></i> Homepage
+        </a>
+      </li>
+
+      <li>
+        <a (click)="this.show = 4" style="cursor: pointer">
+          <i class="fa fa-info-circle" aria-hidden="true"></i> Raw Material
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fa fa-logout" aria-hidden="true"></i> Logout
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+  <div class="content-container">
+  
+    <div class="container-fluid">
+  
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+      
+        <div  *ngIf="show == 1">
+            <app-homepage></app-homepage>
+          </div>
+        
+        <div  *ngIf= "show == 2">
+            <app-operational-directorate></app-operational-directorate>
+        </div>
+
+        <div  *ngIf= "show == 3">
+          <app-cmosystem></app-cmosystem>
+      </div>
+
+      <div  *ngIf= "show == 4">
+        <app-raw-material></app-raw-material>
+      </div>
+
+  		
+
+
+      </div>
+  
+    </div>
+  </div>
+ 
+
