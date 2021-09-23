@@ -14,6 +14,7 @@ import { CMOSYSTEMComponent } from './allComponents/cmosystem/cmosystem.componen
 import { RawMaterialComponent } from './allComponents/raw-material/raw-material.component';
 import { LoginMainComponent } from './allComponents/login-main/login-main.component';
 import { HomepageComponent } from './allComponents/homepage/homepage.component';
+import { UploadComponent } from './allComponents/upload/upload.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { HomepageComponent } from './allComponents/homepage/homepage.component';
     CMOSYSTEMComponent,
     RawMaterialComponent,
     LoginMainComponent,
-    HomepageComponent
+    HomepageComponent,
+    UploadComponent
   ],
   imports: [
     BrowserModule,

@@ -36,6 +36,11 @@
         </a>
       </li>
       <li>
+        <a (click)="this.show = 5" style="cursor: pointer">
+          <i class="fa fa-info-circle" aria-hidden="true"></i> Upload
+        </a>
+      </li>
+      <li>
         <a href="#">
           <i class="fa fa-logout" aria-hidden="true"></i> Logout
         </a>
@@ -64,6 +69,9 @@
 
       <div  *ngIf= "show == 4">
         <app-raw-material></app-raw-material>
+      </div>
+      <div  *ngIf= "show == 5">
+        <app-upload></app-upload>
       </div>
 
   		
